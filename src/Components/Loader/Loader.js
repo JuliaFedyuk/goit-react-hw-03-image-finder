@@ -7,6 +7,7 @@ const override = css`
   margin: 0 auto;
   border-color: red;
   margin-top: 30px;
+  margin-bottom: 30px;
 `;
 
 class Loader extends React.Component {
