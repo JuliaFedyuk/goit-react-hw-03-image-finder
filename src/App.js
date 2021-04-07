@@ -23,10 +23,12 @@ export default class App extends Component {
     if (prevState.searchQuery !== this.state.searchQuery) {
       this.fetchImages();
     }
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: 'smooth',
-    });
+    if (prevState.images.length < this.state.images.length) {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
   }
 
   onChangeQuery = query => {
